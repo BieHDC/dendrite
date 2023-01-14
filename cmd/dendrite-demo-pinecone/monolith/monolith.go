@@ -362,7 +362,7 @@ func (p *P2PMonolith) startEventHandler() {
 						}
 					}
 				case pineconeEvents.BroadcastReceived:
-					// eLog.Info("Broadcast received from: ", e.PeerID)
+					eLog.Info("Broadcast received from: ", e.PeerID)
 
 					req := &federationAPI.PerformWakeupServersRequest{
 						ServerNames: []gomatrixserverlib.ServerName{gomatrixserverlib.ServerName(e.PeerID)},
